@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block title %}MotoTech Limited | Malawi Tech Startup{% endblock %}</title>
+<title>{% block title %}MoyoTech Limited | Malawi Tech Startup{% endblock %}</title>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- Google Fonts: Poppins -->
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, .font-maria {
 <div class="container mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Logo & Title -->
     <div class="flex items-center space-x-3">
-        <img src="{% static 'j.png' %}" alt="MotoTech Logo" style="width: 200px;">
+        <img src="{% static 'j.png' %}" alt="MoyoTech Logo" style="width: 200px;">
         <div>
             <h1 class="font-maria text-xl md:text-2xl font-bold leading-tight"></h1>
         </div>
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, .font-maria {
     <!-- Desktop Contact -->
     <div class="hidden md:block text-sm text-right">
         <p><strong>Office:</strong> +265 999 712 254</p>
-        <p><strong>Email:</strong> <a href="mailto:info@mototech.mw" class="underline text-orange-600">info@mototech.mw</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@moyotech.mw" class="underline text-orange-600">info@moyotech.mw</a></p>
     </div>
     <!-- Mobile Menu Button -->
     <button id="menu-btn" class="md:hidden text-2xl">
@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, .font-maria {
     <a href="{% url 'contact' %}" class="block py-2 hover:text-orange-600">Contact</a>
     <div class="pt-3 border-t">
         <p class="text-xs"><strong>Office:</strong> +265 999 712 254</p>
-        <p class="text-xs"><strong>Email:</strong> <a href="mailto:info@mototech.mw" class="underline text-orange-600">info@mototech.mw</a></p>
+        <p class="text-xs"><strong>Email:</strong> <a href="mailto:info@moyotech.mw" class="underline text-orange-600">info@moyotech.mw</a></p>
     </div>
 </div>
 </div>
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, .font-maria {
 <div class="container mx-auto px-4">
 <div class="grid md:grid-cols-3 gap-8">
     <div>
-        <h4 class="font-maria text-xl font-bold mb-4">MotoTech Limited</h4>
+        <h4 class="font-maria text-xl font-bold mb-4">MoyoTech Limited</h4>
         <p class="text-gray-400">Building innovative tech solutions to power Malawi's digital future.</p>
     </div>
     <div>
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, .font-maria {
     </div>
 </div>
 <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-    <p>© 2025 MotoTech Limited. Developed By PezaMw All rights reserved.</p>
+    <p>© 2025 MoyoTech Limited. Developed By PezaMw All rights reserved.</p>
 </div>
 </div>
 </footer>
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, .font-maria {
                 <i class="fas fa-robot text-orange-800"></i>
             </div>
             <div>
-                <h4 class="font-semibold text-sm md:text-base">MotoTech Assistant</h4>
+                <h4 class="font-semibold text-sm md:text-base">MoyoTech Assistant</h4>
                 <p class="text-xs opacity-90">Ask about services, products, or partnerships</p>
             </div>
         </div>
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, .font-maria {
                 <i class="fas fa-robot text-orange-700 text-sm"></i>
             </div>
             <div class="bg-white p-3 rounded-lg max-w-xs text-sm">
-                Hello! Welcome to <strong>MotoTech</strong>.<br>How can I help you today?
+                Hello! Welcome to <strong>MoyoTech</strong>.<br>How can I help you today?
             </div>
         </div>
     </div>
@@ -319,13 +319,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="relative group">
     <div class="absolute inset-x-0 h-1 bg-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" id="scanner-beam"></div>
     <div class="bg-white p-4 rounded-xl shadow-2xl border border-gray-200 text-center transform transition-all duration-300 hover:scale-105">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mototech.mw" alt="Scan to visit MotoTech" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-3">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://moyotech.mw" alt="Scan to visit MoyoTech" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-3">
         <p class="text-xs md:text-sm font-semibold text-gray-700 flex items-center justify-center gap-2">
             <i class="fas fa-qrcode text-orange-600"></i> Scan Me
         </p>
     </div>
     <div class="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 bg-black text-white text-xs rounded px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-        Open MotoTech Website
+        Open MoyoTech Website
         <div class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-2 w-0 h-0 border-t-4 border-b-4 border-r-8 border-transparent border-r-black"></div>
     </div>
 </div>
@@ -371,7 +371,7 @@ chatForm.addEventListener('submit', (e) => {
     setTimeout(() => {
         const replies = [
             "We build custom software, mobile apps, and IoT solutions tailored for Malawi.",
-            "Get in touch at +265 999 712 254 or info@mototech.mw to discuss your project.",
+            "Get in touch at +265 999 712 254 or info@moyotech.mw to discuss your project.",
             "Yes, we offer full-stack development, UI/UX design, and cloud deployment.",
             "Our team specializes in Python, Django, React, Flutter, and embedded systems.",
             "Project pricing starts from MWK 2.5M depending on scope and timeline."
