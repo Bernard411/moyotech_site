@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Services | Moyo Tech{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="services" class="relative h-[70vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden">
+    <!-- Service-themed hero slides -->
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+
+    <div class="hero-overlay absolute inset-0 flex items-center justify-center text-center z-10 px-4">
+        <div class="animate-fade-in max-w-4xl mx-auto">
+            <h1 class="font-maria text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight hero-text">
+                Our Services
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto hero-subtext">
+                From custom software to tech training — we partner with Malawi's innovators to build and scale.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services-grid" class="btn-primary text-white px-8 py-3 font-semibold rounded-lg inline-block">
+                    View Services
+                </a>
+                <a href="#contact" class="btn-secondary text-white px-8 py-3 font-semibold rounded-lg inline-block">
+                    Start Project
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">50+</div>
+                <div class="text-lg font-semibold">Projects Delivered</div>
+                <p class="text-gray-600 mt-2">On time, under budget</p>
+            </div>
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">95%</div>
+                <div class="text-lg font-semibold">Client Satisfaction</div>
+                <p class="text-gray-600 mt-2">Repeat business rate</p>
+            </div>
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">MWK 2.5M</div>
+                <div class="text-lg font-semibold">Starting Project</div>
+                <p class="text-gray-600 mt-2">Flexible pricing models</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section id="services-grid" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="font-maria text-4xl font-bold text-center mb-4">What We Offer</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">End-to-end tech solutions tailored for startups and enterprises in Malawi.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="#custom-dev" class="service-card bg-white p-6 rounded-lg text-center border border-gray-100 hover:border-orange-500 transition">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-code text-2xl text-orange-700"></i>
+                </div>
+                <h3 class="font-maria text-xl font-semibold mb-3">Custom Software Development</h3>
+                <p class="text-gray-600">Web, mobile, and backend apps — Python/Django, React, Flutter. From MVP to scale.</p>
+            </a>
+            <a href="#consulting" class="service-card bg-white p-6 rounded-lg text-center border border-gray-100 hover:border-orange-500 transition">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-2xl text-orange-700"></i>
+                </div>
+                <h3 class="font-maria text-xl font-semibold mb-3">Tech Consulting & Strategy</h3>
+                <p class="text-gray-600">Digital transformation roadmaps, AI audits, and growth hacking for your business.</p>
+            </a>
+            <a href="#training" class="service-card bg-white p-6 rounded-lg text-center border border-gray-100 hover:border-orange-500 transition">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-graduation-cap text-2xl text-orange-700"></i>
+                </div>
+                <h3 class="font-maria text-xl font-semibold mb-3">Corporate Tech Training</h3>
+                <p class="text-gray-600">Bootcamps in AI, cybersecurity, and devops — customized for your team.</p>
+            </a>
+            <a href="#iot" class="service-card bg-white p-6 rounded-lg text-center border border-gray-100 hover:border-orange-500 transition">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-microchip text-2xl text-orange-700"></i>
+                </div>
+                <h3 class="font-maria text-xl font-semibold mb-3">IoT & Hardware Solutions</h3>
+                <p class="text-gray-600">Smart sensors for agri/farms, integrated with our apps for data-driven decisions.</p>
+            </a>
+            <a href="#cloud" class="service-card bg-white p-6 rounded-lg text-center border border-gray-100 hover:border-orange-500 transition">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-cloud text-2xl text-orange-700"></i>
+                </div>
+                <h3 class="font-maria text-xl font-semibold mb-3">Cloud Deployment & DevOps</h3>
+                <p class="text-gray-600">AWS/Azure setup, CI/CD pipelines, and scalable infrastructure for startups.</p>
+            </a>
+            <a href="#uiux" class="service-card bg-white p-6 rounded-lg text-center border border-gray-100 hover:border-orange-500 transition">
+                <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-paint-brush text-2xl text-orange-700"></i>
+                </div>
+                <h3 class="font-maria text-xl font-semibold mb-3">UI/UX Design</h3>
+                <p class="text-gray-600">User-centered designs with Figma — prototypes that convert users to customers.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Services -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="font-maria text-4xl font-bold text-center mb-12">Our Process</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fas fa-1"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Discovery</h3>
+                <p class="text-gray-600">We understand your goals and challenges through workshops.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fas fa-2"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Build</h3>
+                <p class="text-gray-600">Agile development with weekly sprints and client feedback.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fas fa-3"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Launch & Support</h3>
+                <p class="text-gray-600">Deployment, training, and 6-month maintenance included.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="font-maria text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <p class="text-gray-700 mb-4">"Moyo Tech built our MVP in 8 weeks — game-changer for our agri startup!"</p>
+                <h4 class="font-semibold text-orange-600">Chikwama Farms</h4>
+                <p class="text-sm text-gray-500">CEO, Lilongwe</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <p class="text-gray-700 mb-4">"Their training upskilled our team — now deploying apps 2x faster."</p>
+                <h4 class="font-semibold text-orange-600">mHub Malawi</h4>
+                <p class="text-sm text-gray-500">Innovation Lead</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <p class="text-gray-700 mb-4">"Custom IoT solution saved us 40% on farm monitoring costs."</p>
+                <h4 class="font-semibold text-orange-600">NCIC Partner</h4>
+                <p class="text-sm text-gray-500">Project Manager</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Teaser -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="font-maria text-4xl font-bold mb-6">Flexible Pricing</h2>
+        <p class="text-gray-600 mb-8">From startups to enterprises — pay as you grow.</p>
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-orange-600 mb-2">Starter</h3>
+                <p class="text-3xl font-bold mb-4">MWK 2.5M</p>
+                <ul class="text-left space-y-2 mb-6">
+                    <li><i class="fas fa-check text-orange-600 mr-2"></i>MVP Development</li>
+                    <li><i class="fas fa-check text-orange-600 mr-2"></i>Basic Training</li>
+                </ul>
+                <a href="#contact" class="btn-primary w-full">Get Quote</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-orange-600">
+                <h3 class="text-2xl font-bold text-orange-600 mb-2">Pro</h3>
+                <p class="text-3xl font-bold mb-4">MWK 5M+</p>
+                <ul class="text-left space-y-2 mb-6">
+                    <li><i class="fas fa-check text-orange-600 mr-2"></i>Full Custom Build</li>
+                    <li><i class="fas fa-check text-orange-600 mr-2"></i>Consulting + Support</li>
+                </ul>
+                <a href="#contact" class="btn-primary w-full">Get Quote</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-orange-600 mb-2">Enterprise</h3>
+                <p class="text-3xl font-bold mb-4">Custom</p>
+                <ul class="text-left space-y-2 mb-6">
+                    <li><i class="fas fa-check text-orange-600 mr-2"></i>End-to-End Solutions</li>
+                    <li><i class="fas fa-check text-orange-600 mr-2"></i>Dedicated Team</li>
+                </ul>
+                <a href="#contact" class="btn-primary w-full">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section id="contact" class="py-16 bg-orange-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="font-maria text-4xl font-bold mb-6">Let's Build Something Amazing</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Share your project idea — we'll respond in 24 hours.</p>
+        <a href="{% url 'contact' %}" class="bg-white text-orange-600 px-8 py-4 font-semibold rounded-lg hover:bg-gray-100 transition inline-block">
+            Start Your Project
+        </a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Hero Slideshow
+const slides = document.querySelectorAll('.hero-slide');
+let currentSlide = 0;
+setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}, 5000);
+</script>
+{% endblock %}

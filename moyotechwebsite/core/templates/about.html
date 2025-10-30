@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Moyo Tech | Empowering Malawi's Tech Future{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center py-24 md:py-32 text-white text-center"
+     style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+    <div class="container mx-auto px-4">
+        <h1 class="font-maria text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+            Empowering Malawi's Tech Future
+        </h1>
+        <p class="text-lg md:text-xl max-w-4xl mx-auto mb-8 opacity-90 animate-fade-in" style="animation-delay: 0.3s;">
+            Moyo Tech is Malawi’s premier technology training academy, building the next generation of software engineers, AI experts, and digital innovators.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 animate-fade-in" style="animation-delay: 0.6s;">
+            <div class="bg-white text-orange-700 px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+                <i class="fas fa-certificate"></i> Industry Certified
+            </div>
+            <div class="bg-white text-orange-700 px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2">
+                <i class="fas fa-globe"></i> Global Standards
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mx-auto px-4 -mt-16 relative z-10 mb-16">
+
+    <!-- Who We Are -->
+    <div class="bg-white rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
+        <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-6 text-center">
+            Who We Are
+        </h2>
+        <p class="text-gray-700 leading-relaxed text-lg text-center max-w-4xl mx-auto">
+            <strong>Moyo Tech</strong> is Malawi’s leading technology training academy, dedicated to transforming youth into skilled, ethical, and globally competitive tech professionals.
+        </p>
+        <p class="text-gray-600 mt-4 leading-relaxed text-center max-w-4xl mx-auto">
+            Founded to make world-class tech education accessible, Moyo Tech delivers hands-on training in software development, AI, cybersecurity, and digital entrepreneurship — tailored to Malawi’s growing digital economy.
+        </p>
+        <p class="text-gray-600 mt-4 leading-relaxed text-center max-w-4xl mx-auto">
+            With expert instructors, real-world projects, and partnerships with tech hubs like mHub and Andela, we’re building a pipeline of talent that powers innovation — <strong>one coder at a time</strong>.
+        </p>
+    </div>
+
+    <!-- Vision & Mission -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg service-card animate-fade-in">
+            <div class="flex items-center gap-3 mb-4">
+                <i class="fas fa-eye text-3xl text-orange-600"></i>
+                <h3 class="font-maria text-2xl font-bold text-orange-700">Our Vision</h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                To be <strong>Africa’s leading tech education hub</strong>, producing world-class developers, data scientists, and digital leaders from Malawi who drive innovation and economic growth.
+            </p>
+        </div>
+        <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 shadow-lg service-card animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="flex items-center gap-3 mb-4">
+                <i class="fas fa-rocket text-3xl text-orange-600"></i>
+                <h3 class="font-maria text-2xl font-bold text-orange-700">Our Mission</h3>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                To empower Malawian youth with <strong>accessible, practical, and industry-aligned tech training</strong> that creates jobs, builds startups, and fuels Malawi’s digital transformation.
+            </p>
+        </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="bg-white rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
+        <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-8 text-center">
+            Our Core Values
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4 class="font-semibold text-lg text-gray-800">Innovation</h4>
+                <p class="text-gray-600 text-sm mt-1">Pushing boundaries with creative tech solutions.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h4 class="font-semibold text-lg text-gray-800">Excellence</h4>
+                <p class="text-gray-600 text-sm mt-1">World-class training and global standards.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4 class="font-semibold text-lg text-gray-800">Inclusion</h4>
+                <p class="text-gray-600 text-sm mt-1">Tech education for all, regardless of background.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4 class="font-semibold text-lg text-gray-800">Integrity</h4>
+                <p class="text-gray-600 text-sm mt-1">Ethical practices in training and partnerships.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4 class="font-semibold text-lg text-gray-800">Impact</h4>
+                <p class="text-gray-600 text-sm mt-1">Real-world projects that solve local problems.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fas fa-people-arrows"></i>
+                </div>
+                <h4 class="font-semibold text-lg text-gray-800">Community</h4>
+                <p class="text-gray-600 text-sm mt-1">Collaboration, mentorship, and knowledge sharing.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Commitment -->
+    <div class="bg-gradient-to-r from-orange-600 to-orange-800 text-white rounded-2xl p-8 md:p-12 shadow-xl service-card animate-fade-in mb-12">
+        <h2 class="font-maria text-3xl md:text-4xl font-bold mb-6 text-center">
+            Our Commitment
+        </h2>
+        <p class="text-lg leading-relaxed text-center max-w-4xl mx-auto">
+            At Moyo Tech, we believe technology is more than code — it’s a <strong>tool for empowerment, entrepreneurship, and national progress</strong>.
+        </p>
+        <p class="mt-4 leading-relaxed text-center max-w-4xl mx-auto">
+            By delivering practical, job-ready training and fostering a culture of innovation, we’re not just teaching skills — we’re building <strong>Malawi’s digital future</strong>.
+        </p>
+    </div>
+
+    <!-- Courses Overview -->
+    <div class="bg-white rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
+        <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-6 text-center">
+            Courses Offered at Moyo Tech
+        </h2>
+        <p class="text-gray-700 text-center mb-8 max-w-3xl mx-auto">
+            Moyo Tech offers <strong>12 industry-certified tech programs</strong> with hands-on projects, internships, and global certifications.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-500 transition service-card">
+                <h4 class="font-semibold text-orange-600 flex items-center gap-2">
+                    <i class="fas fa-laptop-code"></i> Full-Stack Web Development
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">React, Django, AWS deployment.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-500 transition service-card">
+                <h4 class="font-semibold text-orange-600 flex items-center gap-2">
+                    <i class="fas fa-robot"></i> AI & Machine Learning
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">Python, TensorFlow, NLP.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-500 transition service-card">
+                <h4 class="font-semibold text-orange-600 flex items-center gap-2">
+                    <i class="fas fa-shield-alt"></i> Cybersecurity
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">Ethical hacking, penetration testing.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-500 transition service-card">
+                <h4 class="font-semibold text-orange-600 flex items-center gap-2">
+                    <i class="fas fa-mobile-alt"></i> Mobile App Development
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">Flutter, React Native.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-500 transition service-card">
+                <h4 class="font-semibold text-orange-600 flex items-center gap-2">
+                    <i class="fas fa-cloud"></i> Cloud Computing
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">AWS, Azure, DevOps.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-5 hover:border-orange-500 transition service-card">
+                <h4 class="font-semibold text-orange-600 flex items-center gap-2">
+                    <i class="fas fa-paint-brush"></i> UI/UX Design
+                </h4>
+                <p class="text-sm text-gray-600 mt-1">Figma, user-centered design.</p>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="{% url 'courses' %}" class="btn-primary inline-flex items-center gap-2 text-lg">
+                Explore All 12 Courses <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Why Train with Moyo Tech -->
+    <div class="bg-orange-50 rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
+        <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-8 text-center">
+            Why Train with Moyo Tech?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+            <div class="flex gap-3">
+                <i class="fas fa-check-circle text-orange-600 text-xl mt-1 flex-shrink-0"></i>
+                <p><strong>Job-Ready Skills</strong> – 95% graduate employment rate.</p>
+            </div>
+            <div class="flex gap-3">
+                <i class="fas fa-check-circle text-orange-600 text-xl mt-1 flex-shrink-0"></i>
+                <p><strong>Hands-On Projects</strong> – Build real apps with local startups.</p>
+            </div>
+            <div class="flex gap-3">
+                <i class="fas fa-check-circle text-orange-600 text-xl mt-1 flex-shrink-0"></i>
+                <p><strong>Global Certifications</strong> – AWS, Google, CompTIA, etc.</p>
+            </div>
+            <div class="flex gap-3">
+                <i class="fas fa-check-circle text-orange-600 text-xl mt-1 flex-shrink-0"></i>
+                <p><strong>Startup Incubation</strong> – Launch your tech venture with support.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Announcement -->
+    <div class="bg-gradient-to-r from-orange-500 to-orange-700 text-white rounded-2xl p-8 md:p-12 shadow-xl service-card animate-fade-in">
+        <div class="flex items-center gap-3 mb-4">
+            <i class="fas fa-bullhorn text-3xl"></i>
+            <h3 class="font-maria text-2xl md:text-3xl font-bold">Latest News</h3>
+        </div>
+        <p class="text-sm opacity-90 mb-3">Lilongwe, Malawi – October 2025</p>
+        <h4 class="text-xl font-bold mb-3">Moyo Tech Graduates Join Andela & mHub</h4>
+        <p class="leading-relaxed">
+            Five of our Full-Stack Web Development graduates have been hired by <strong>Andela Malawi</strong> and <strong>mHub</strong> after completing capstone projects with real clients.
+        </p>
+        <p class="mt-3 leading-relaxed">
+            This success showcases Moyo Tech’s <strong>industry-aligned curriculum</strong> and <strong>job-ready training model</strong>.
+        </p>
+    </div>
+</div>
+{% endblock %}

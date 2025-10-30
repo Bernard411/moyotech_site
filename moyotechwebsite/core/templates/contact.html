@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact Us | Moyo Tech{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center py-24 md:py-32 text-white text-center"
+     style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');">
+    <div class="container mx-auto px-4">
+        <h1 class="font-maria text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+            Get in Touch
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 opacity-90 animate-fade-in" style="animation-delay: 0.3s;">
+            Have questions about courses, admissions, or tech training? We're here to help you launch your career.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 animate-fade-in" style="animation-delay: 0.6s;">
+            <a href="tel:+265999123456" class="bg-white text-orange-700 px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-orange-50 transition">
+                <i class="fas fa-phone"></i> Call: +265 999 123 456
+            </a>
+            <a href="mailto:info@moyotech.mw" class="bg-white text-orange-700 px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-orange-50 transition">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="container mx-auto px-4 -mt-16 relative z-10 mb-16">
+
+    <!-- Contact Info + Form -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+        <!-- LEFT: Contact Details -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl service-card animate-fade-in">
+            <h2 class="font-maria text-2xl md:text-3xl font-bold text-orange-700 mb-6 flex items-center gap-3">
+                <i class="fas fa-headset text-orange-600"></i> Contact Information
+            </h2>
+            <div class="space-y-5 text-gray-700">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Office Location</h4>
+                        <p class="text-sm">
+                            mHub Innovation Centre<br>
+                            Area 47, Sector 5, Lilongwe, Malawi
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Phone Numbers</h4>
+                        <ul class="text-sm space-y-1">
+                            <li><strong>CEO:</strong> <a href="tel:+265999123456" class="text-orange-700 hover:underline">+265 999 123 456</a></li>
+                            <li><strong>Admissions:</strong> <a href="tel:+265888765432" class="text-orange-700 hover:underline">+265 888 765 432</a></li>
+                            <li><strong>Support:</strong> <a href="tel:+265881234567" class="text-orange-700 hover:underline">+265 881 234 567</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Email</h4>
+                        <p class="text-sm">
+                            <a href="mailto:info@moyotech.mw" class="text-orange-700 hover:underline">info@moyotech.mw</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Office Hours</h4>
+                        <p class="text-sm">
+                            Monday – Friday: 8:00 AM – 5:00 PM<br>
+                            Saturday: 9:00 AM – 1:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <h4 class="font-semibold text-gray-800 mb-3">Follow Us</h4>
+                <div class="flex gap-3">
+                    <a href="https://facebook.com/moyotech" target="_blank" class="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center hover:bg-orange-700 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com/moyotech" target="_blank" class="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center hover:bg-orange-700 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/moyotech" target="_blank" class="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center hover:bg-orange-700 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/265999123456" target="_blank" class="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center hover:bg-orange-700 transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl service-card animate-fade-in" style="animation-delay: 0.2s;">
+            <h2 class="font-maria text-2xl md:text-3xl font-bold text-orange-700 mb-6 flex items-center gap-3">
+                <i class="fas fa-paper-plane text-orange-600"></i> Send Us a Message
+            </h2>
+            <form method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name *</label>
+                        <input type="text" name="name" required placeholder="John Doe"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address *</label>
+                        <input type="email" name="email" required placeholder="you@example.com"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" name="phone" placeholder="+265 ..."
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Subject *</label>
+                        <select name="subject" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition">
+                            <option value="">-- Select --</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="courses">Course Information</option>
+                            <option value="partnership">Partnerships</option>
+                            <option value="hackathon">Hackathons & Events</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Your Message *</label>
+                    <textarea name="message" rows="5" required placeholder="How can we help you build your tech future?"
+                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full py-4 text-lg font-semibold flex items-center justify-center gap-2">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl service-card animate-fade-in mb-12">
+        <h2 class="font-maria text-2xl md:text-3xl font-bold text-orange-700 mb-6 text-center">
+            Find Us on the Map
+        </h2>
+        <div class="relative overflow-hidden rounded-xl h-96 bg-gray-200 border-2 border-dashed border-gray-300">
+            <!-- Google Maps Embed: mHub Lilongwe -->
+            <iframe
+                class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.397572995271!2d33.778!3d-13.789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18f9d2e3f4a1b2a7%3A0x8f8e8f8e8f8e8f8e!2smHub%20Lilongwe!5e0!3m2!1sen!2smw!4v1699999999999!5m2!1sen!2smw"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+        <p class="text-center text-sm text-gray-600 mt-4">
+            Located at <strong>mHub Innovation Centre</strong>, Area 47, Lilongwe
+        </p>
+    </div>
+
+    <!-- News Announcement -->
+    <div class="bg-gradient-to-r from-orange-500 to-orange-700 text-white rounded-2xl p-8 md:p-12 shadow-xl service-card animate-fade-in">
+        <div class="flex items-center gap-3 mb-4">
+            <i class="fas fa-bullhorn text-3xl"></i>
+            <h3 class="font-maria text-2xl md:text-3xl font-bold">Latest News</h3>
+        </div>
+        <p class="text-sm opacity-90 mb-3">Lilongwe, Malawi – October 30, 2025</p>
+        <h4 class="text-xl font-bold mb-3">Moyo Tech Launches AI for Agriculture Program</h4>
+        <p class="leading-relaxed">
+            In partnership with <strong>NCIC</strong> and <strong>mHub</strong>, we’ve launched a 6-month AI bootcamp training 50 youth to build crop-monitoring apps using drone data and machine learning.
+        </p>
+        <p class="mt-3 leading-relaxed">
+            This initiative reflects Moyo Tech’s commitment to <strong>tech-driven agricultural innovation</strong> and <strong>job creation</strong> in Malawi.
+        </p>
+    </div>
+</div>
+{% endblock %}

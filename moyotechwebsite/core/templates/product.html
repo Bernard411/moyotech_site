@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Products | Moyo Tech{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="products" class="relative h-[70vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden">
+    <!-- Tech product-themed hero slides -->
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551288048-b1e3b3b4d9e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');"></div>
+
+    <div class="hero-overlay absolute inset-0 flex items-center justify-center text-center z-10 px-4">
+        <div class="animate-fade-in max-w-4xl mx-auto">
+            <h1 class="font-maria text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight hero-text">
+                Our Software Products
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto hero-subtext">
+                Innovative tools built in Malawi, for Malawi — empowering education, agriculture, and business with accessible tech.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#explore" class="btn-primary text-white px-8 py-3 font-semibold rounded-lg inline-block">
+                    Explore Products
+                </a>
+                <a href="#contact" class="btn-secondary text-white px-8 py-3 font-semibold rounded-lg inline-block">
+                    Get a Demo
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">4+</div>
+                <div class="text-lg font-semibold">Live Products</div>
+                <p class="text-gray-600 mt-2">Serving 10K+ users</p>
+            </div>
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">98%</div>
+                <div class="text-lg font-semibold">Uptime</div>
+                <p class="text-gray-600 mt-2">Cloud-secure & reliable</p>
+            </div>
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">500+</div>
+                <div class="text-lg font-semibold">Partners</div>
+                <p class="text-gray-600 mt-2">mHub, NCIC, Andela</p>
+            </div>
+            <div class="stats-card text-center p-6 bg-white rounded-xl shadow-lg">
+                <div class="text-5xl font-bold text-orange-600 mb-2">MWK 2M</div>
+                <div class="text-lg font-semibold">Starting Price</div>
+                <p class="text-gray-600 mt-2">Customizable solutions</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section id="explore" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="font-maria text-4xl font-bold text-center mb-4">Our Flagship Products</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Tailored for Malawi's digital economy — from edtech platforms to agri-tech tools.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Product 1: MoyoLearn LMS -->
+            <div class="course-card group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1524178232363-9330f4047b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="MoyoLearn" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <h3 class="font-maria text-lg font-bold">MoyoLearn LMS</h3>
+                        <p class="text-xs opacity-90">EdTech Platform</p>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-2">Cloud-based learning management system for schools and academies — track progress, deliver courses, and certify skills.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold text-orange-600">From MWK 1M</span>
+                        <a href="#contact" class="enroll-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Request Demo</a>
+                    </div>
+                </div>
+                <div class="course-popup absolute inset-0 bg-white p-6 transform translate-y-full transition-transform duration-500 z-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-maria text-xl font-bold text-orange-700 mb-3">MoyoLearn LMS</h3>
+                        <ul class="space-y-2 text-sm text-gray-700 mb-4">
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Mobile-first for low-data access</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Chichewa/English support</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Analytics & certifications</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Integrates with Zoom/AWS</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 italic">Powering 5K+ students across Malawi.</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <a href="#contact" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Get Started</a>
+                        <button class="close-popup flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 transition">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: FarmSmart Agri-Tech -->
+            <div class="course-card group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="FarmSmart" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <h3 class="font-maria text-lg font-bold">FarmSmart</h3>
+                        <p class="text-xs opacity-90">Agri-Tech App</p>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-2">Mobile app for smallholder farmers — crop advice, market prices, and weather alerts in real-time.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold text-orange-600">From MWK 500K</span>
+                        <a href="#contact" class="enroll-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Request Demo</a>
+                    </div>
+                </div>
+                <div class="course-popup absolute inset-0 bg-white p-6 transform translate-y-full transition-transform duration-500 z-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-maria text-xl font-bold text-orange-700 mb-3">FarmSmart Agri-Tech</h3>
+                        <ul class="space-y-2 text-sm text-gray-700 mb-4">
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Offline mode for rural areas</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>AI crop disease detection</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Market linkage to buyers</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>SMS integration</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 italic">Boosting yields for 2K+ farmers.</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <a href="#contact" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Get Started</a>
+                        <button class="close-popup flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 transition">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: BizFlow ERP -->
+            <div class="course-card group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="BizFlow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <h3 class="font-maria text-lg font-bold">BizFlow ERP</h3>
+                        <p class="text-xs opacity-90">Business Management</p>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-2">Affordable ERP for SMEs — inventory, CRM, and analytics to streamline operations.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold text-orange-600">From MWK 1.5M</span>
+                        <a href="#contact" class="enroll-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Request Demo</a>
+                    </div>
+                </div>
+                <div class="course-popup absolute inset-0 bg-white p-6 transform translate-y-full transition-transform duration-500 z-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-maria text-xl font-bold text-orange-700 mb-3">BizFlow ERP</h3>
+                        <ul class="space-y-2 text-sm text-gray-700 mb-4">
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Custom modules for retail/agri</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Real-time dashboards</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Mobile app sync</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Local payment gateways</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 italic">Used by 300+ Malawian businesses.</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <a href="#contact" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Get Started</a>
+                        <button class="close-popup flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 transition">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: CodeHub IDE -->
+            <div class="course-card group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CodeHub" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <h3 class="font-maria text-lg font-bold">CodeHub IDE</h3>
+                        <p class="text-xs opacity-90">Developer Tool</p>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <p class="text-sm text-gray-600 mb-4 line-clamp-2">Collaborative online IDE for training — supports Python, JS, and team coding sessions.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-semibold text-orange-600">Free Tier Available</span>
+                        <a href="#contact" class="enroll-btn bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Request Demo</a>
+                    </div>
+                </div>
+                <div class="course-popup absolute inset-0 bg-white p-6 transform translate-y-full transition-transform duration-500 z-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-maria text-xl font-bold text-orange-700 mb-3">CodeHub IDE</h3>
+                        <ul class="space-y-2 text-sm text-gray-700 mb-4">
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Real-time collaboration</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Built-in debugger & AI hints</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Offline sync</li>
+                            <li><i class="fas fa-check text-orange-600 mr-2"></i>Integration with Git</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 italic">Empowering 1K+ developers in training.</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                        <a href="#contact" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition">Get Started</a>
+                        <button class="close-popup flex-1 bg-gray-200 text-gray-700 text-center py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 transition">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="#contact" class="bg-orange-600 text-white px-8 py-3 font-semibold rounded-lg hover:bg-orange-700 transition inline-block">
+                Build Custom Product <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Products -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="font-maria text-4xl font-bold text-center mb-12">Why Choose Moyo Tech Products?</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <img src="https://images.unsplash.com/photo-1559757269-7d1ee0e7a395?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Product Development" class="rounded-lg shadow-lg">
+            </div>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="font-maria text-2xl font-semibold mb-3">Built for Malawi</h3>
+                    <p class="text-lg leading-relaxed">Our products integrate local languages, low-data modes, and partnerships with mHub/NCIC for seamless adoption.</p>
+                </div>
+                <div>
+                    <h3 class="font-maria text-2xl font-semibold mb-3">Scalable & Secure</h3>
+                    <p class="text-lg leading-relaxed">Powered by AWS, with 98% uptime and GDPR-compliant security for growing businesses.</p>
+                </div>
+                <div>
+                    <h3 class="font-maria text-2xl font-semibold mb-3">Proven Impact</h3>
+                    <p class="text-lg leading-relaxed">From boosting farmer yields by 30% to training 5K+ coders — real results in Malawi's economy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section id="contact" class="py-16 bg-orange-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="font-maria text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Get a free consultation and custom demo today.</p>
+        <a href="{% url 'contact' %}" class="bg-white text-orange-600 px-8 py-4 font-semibold rounded-lg hover:bg-gray-100 transition inline-block">
+            Contact Sales
+        </a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Hero Slideshow
+const slides = document.querySelectorAll('.hero-slide');
+let currentSlide = 0;
+setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}, 5000);
+
+// Product Card Popup
+document.querySelectorAll('.course-card').forEach(card => {
+    const popup = card.querySelector('.course-popup');
+    const closeBtn = card.querySelector('.close-popup');
+    card.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 768) popup.style.transform = 'translateY(0)';
+    });
+    card.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= 768) popup.style.transform = 'translateY(100%)';
+    });
+    card.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+            e.preventDefault();
+            const isOpen = popup.style.transform === 'translateY(0)';
+            document.querySelectorAll('.course-popup').forEach(p => p.style.transform = 'translateY(100%)');
+            if (!isOpen) popup.style.transform = 'translateY(0)';
+        }
+    });
+    closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popup.style.transform = 'translateY(100%)';
+    });
+});
+</script>
+{% endblock %}

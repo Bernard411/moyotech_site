@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Admissions | African Flight Training Academy{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center py-24 md:py-32" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://www.malawitourism.com/wp-content/uploads/2019/03/DSC_0082-1920x720.jpg');">
+    <div class="container mx-auto px-4 text-center text-white">
+        <h1 class="font-maria text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
+            Launch Your Aviation Career
+        </h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-6 opacity-90 animate-fade-in" style="animation-delay: 0.3s;">
+            Join Malawi's premier aviation training academy and earn globally recognized IATA & MCAA certifications
+        </p>
+        <div class="inline-block bg-yellow-500 text-green-900 px-6 py-2 rounded-full font-bold text-sm animate-fade-in" style="animation-delay: 0.6s;">
+            Applications Now Open • October 2025 Intake
+        </div>
+    </div>
+</section>
+
+<div class="container mx-auto px-4 -mt-16 relative z-10">
+    <!-- Two-Column Layout -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+        
+        <!-- LEFT: Admission Form -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl service-card animate-fade-in">
+            <h2 class="font-maria text-2xl md:text-3xl font-bold text-green-800 mb-6 flex items-center gap-3">
+                <i class="fas fa-user-graduate text-green-600"></i> Apply Now
+            </h2>
+            <form method="post" action="{% url 'admissions' %}">
+                {% csrf_token %}
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name *</label>
+                        <input type="text" name="full_name" required placeholder="Enter your full name"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address *</label>
+                        <input type="email" name="email" required placeholder="you@example.com"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number *</label>
+                        <input type="tel" name="phone" required placeholder="+265 ..."
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">Date of Birth *</label>
+                        <input type="date" name="dob" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Program of Interest *</label>
+                    <select name="program" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                        <option value="">-- Select a Course --</option>
+                        <option value="ppl">Pilot Training – Private Pilot License (PPL)</option>
+                        <option value="cabin_crew">IATA Cabin Crew Training</option>
+                        <option value="airline_mgmt">IATA Airline Business Management</option>
+                        <option value="bachelor_aviation">Bachelor in Civil Aviation</option>
+                        <option value="flight_dispatch">Flight Dispatch and Control</option>
+                        <option value="aviation_safety">Aviation Safety</option>
+                        <option value="airport_ops">IATA Airport Operations</option>
+                        <option value="travel_tourism">IATA Travel and Tourism</option>
+                        <option value="customer_service">IATA Customer Service</option>
+                        <option value="aviation_security">IATA Aviation Security</option>
+                        <option value="ticketing">IATA Ticketing and Reservations</option>
+                        <option value="dangerous_goods">IATA Dangerous Goods Regulations</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Highest Qualification *</label>
+                    <input type="text" name="qualification" required placeholder="e.g. MSCE, Diploma, Degree"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Why AFTA? (Optional)</label>
+                    <textarea name="message" rows="3" placeholder="Share your aviation passion..."
+                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-full py-4 text-lg font-semibold flex items-center justify-center gap-2">
+                    Submit Application <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- RIGHT: Entry Requirements -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl service-card animate-fade-in" style="animation-delay: 0.2s;">
+            <h2 class="font-maria text-2xl md:text-3xl font-bold text-green-800 mb-6 flex items-center gap-3">
+                <i class="fas fa-clipboard-check text-green-600"></i> Entry Requirements
+            </h2>
+            
+            <div class="space-y-5">
+                <div class="flex gap-4 pb-4 border-b border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Academic</h4>
+                        <p class="text-gray-600 text-sm">Minimum Malawi School Certificate of Education (MSCE) or equivalent</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 pb-4 border-b border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Language</h4>
+                        <p class="text-gray-600 text-sm">Good command of English (written and spoken)</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-green-100 text-green-700 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Passion</h4>
+                        <p class="text-gray-600 text-sm">Demonstrated interest in aviation and commitment to safety</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t-2 border-dashed border-gray-300">
+                <p class="text-sm text-gray-600">
+                    <strong class="text-gray-800">Progression:</strong> Certificate → Diploma → Degree pathways<br>
+                    <strong class="text-gray-800">Schedules:</strong> Full-time, part-time, modular options
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Announcement -->
+    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-xl service-card animate-fade-in" style="animation-delay: 0.4s;">
+        <div class="flex items-center gap-3 mb-4 text-green-700">
+            <i class="fas fa-bullhorn text-xl"></i>
+            <h3 class="text-xl font-bold font-maria">Latest News</h3>
+        </div>
+        <p class="text-sm text-gray-500 mb-3">Lilongwe, Malawi – October 2025</p>
+        <div class="text-gray-800">
+            <strong class="block mb-2 text-green-700">AFTA Graduates Join Malawi Airlines Cabin Crew Program</strong>
+            Two of our recent IATA Cabin Crew graduates have successfully passed Malawi Airlines recruitment and will undergo professional training in Addis Ababa, Ethiopia.<br><br>
+            This achievement highlights AFTA's industry-aligned training and globally recognized standards.
+        </div>
+    </div>
+</div>
+
+<!-- Loading Animation (Optional - can be removed if not needed) -->
+<script>
+    window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 0.6s ease';
+            document.body.style.opacity = '1';
+        }, 100);
+    });
+</script>
+
+{% endblock %}

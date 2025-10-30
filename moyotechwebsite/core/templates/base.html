@@ -1,0 +1,447 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}MotoTech Limited | Malawi Tech Startup{% endblock %}</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts: Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Maria Font -->
+<link href="https://fonts.cdnfonts.com/css/maria-2" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* Reset and base styles */
+html {
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#content-wrapper {
+    transform: scale(0.75);
+    transform-origin: 0 0;
+    width: calc(100% / 0.75); /* ~133.33% */
+    height: auto;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, .font-maria {
+    font-family: 'Maria', serif;
+}
+/* Dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Hero Slideshow */
+.hero-slide {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 1;
+}
+.hero-slide.active {
+    opacity: 1;
+}
+/* Hero Overlay */
+.hero-overlay {
+    position: relative;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+}
+/* Service Card */
+.service-card {
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+}
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* WhatsApp brand color - kept */
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+/* Mobile Menu */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+/* Stats Animation */
+.stats-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+.stats-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Top Bar - Orange */
+.top-bar {
+    background: #FF6D00; /* Primary Orange */
+}
+/* Button Styles */
+.btn-primary {
+    background: #FF6D00; /* Primary Orange */
+    transition: all 0.3s ease;
+    color: white;
+}
+.btn-primary:hover {
+    background: #E65100; /* Darker Orange */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    color: white;
+}
+.btn-secondary:hover {
+    background: white;
+    color: #FF6D00 !important;
+}
+/* Fade In Animation */
+.animate-fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-text { font-size: 2.5rem !important; }
+    .hero-subtext { font-size: 1.1rem !important; }
+    .mobile-hidden { display: none; }
+    .mobile-menu-btn { display: block; }
+    /* Hide QR code on mobile */
+    #qr-float { display: none; }
+}
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<!-- TOP ORANGE BAR -->
+<div class="top-bar text-white text-center py-2 text-sm font-medium">
+    Innovating Malawi's Tech Future
+</div>
+
+<!-- HEADER -->
+<header class="border-b sticky top-0 bg-white z-50 shadow-md">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo & Title -->
+    <div class="flex items-center space-x-3">
+        <img src="{% static 'j.png' %}" alt="MotoTech Logo" style="width: 200px;">
+        <div>
+            <h1 class="font-maria text-xl md:text-2xl font-bold leading-tight"></h1>
+        </div>
+    </div>
+    <!-- Desktop Contact -->
+    <div class="hidden md:block text-sm text-right">
+        <p><strong>Office:</strong> +265 999 712 254</p>
+        <p><strong>Email:</strong> <a href="mailto:info@mototech.mw" class="underline text-orange-600">info@mototech.mw</a></p>
+    </div>
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="hidden bg-white border-b shadow-lg md:hidden">
+<div class="px-4 py-3 space-y-2 text-sm font-medium">
+    <a href="{% url 'home' %}" class="block py-2 hover:text-orange-600">Home</a>
+    <a href="{% url 'about' %}" class="block py-2 hover:text-orange-600">About</a>
+    <a href="{% url 'services' %}" class="block py-2 hover:text-orange-600">Services</a>
+    <a href="{% url 'product' %}" class="block py-2 hover:text-orange-600">Products</a>
+    <a href="{% url 'contact' %}" class="block py-2 hover:text-orange-600">Contact</a>
+    <div class="pt-3 border-t">
+        <p class="text-xs"><strong>Office:</strong> +265 999 712 254</p>
+        <p class="text-xs"><strong>Email:</strong> <a href="mailto:info@mototech.mw" class="underline text-orange-600">info@mototech.mw</a></p>
+    </div>
+</div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="bg-white border-b sticky top-16 md:top-20 z-40 shadow-sm hidden md:block">
+<div class="container mx-auto px-4">
+<div class="flex justify-center space-x-6 py-3 text-sm font-medium">
+    <a href="{% url 'home' %}" class="hover:text-orange-600 transition">Home</a>
+    <a href="{% url 'about' %}" class="hover:text-orange-600 transition">About</a>
+    <div class="relative dropdown">
+        <button class="hover:text-orange-600 flex items-center transition">
+            Company
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <div class="dropdown-menu hidden absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50 border">
+            <a href="#vision" class="block px-4 py-2 hover:bg-gray-50">Vision & Mission</a>
+            <a href="#values" class="block px-4 py-2 hover:bg-gray-50">Core Values</a>
+        </div>
+    </div>
+    <div class="relative dropdown">
+        <button class="hover:text-orange-600 flex items-center transition">
+            Solutions
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+        <div class="dropdown-menu hidden absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-2 z-50 border">
+            <a href="#software" class="block px-4 py-2 hover:bg-gray-50">Custom Software</a>
+            <a href="#mobile" class="block px-4 py-2 hover:bg-gray-50">Mobile Apps</a>
+            <a href="#iot" class="block px-4 py-2 hover:bg-gray-50">IoT & Hardware</a>
+        </div>
+    </div>
+    <a href="{% url 'services' %}" class="hover:text-orange-600 transition">Services</a>
+     <a href="{% url 'product' %}" class="hover:text-orange-600 transition">Our Products</a>
+    <a href="{% url 'team'%}" class="hover:text-orange-600 transition">Our Team</a>
+    <a href="{% url 'contact' %}" class="hover:text-orange-600 transition">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- MAIN CONTENT BLOCK -->
+{% block content %}
+{% endblock %}
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-3 gap-8">
+    <div>
+        <h4 class="font-maria text-xl font-bold mb-4">MotoTech Limited</h4>
+        <p class="text-gray-400">Building innovative tech solutions to power Malawi's digital future.</p>
+    </div>
+    <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-gray-400">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition">About</a></li>
+            <li><a href="" class="hover:text-white transition">Services</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="font-semibold mb-4">Partnerships</h4>
+        <div class="flex space-x-4">
+            <div class="bg-white text-black px-3 py-1 rounded text-sm font-bold">MUST</div>
+            <div class="bg-white text-black px-3 py-1 rounded text-sm font-bold">NCIC</div>
+        </div>
+    </div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+    <p>© 2025 MotoTech Limited. Developed By PezaMw All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<!-- FLOATING CHAT BOT -->
+<div id="chat-bot" class="fixed bottom-20 right-4 z-50 transition-all duration-300">
+<button id="chat-toggle" class="w-14 h-14 md:w-16 md:h-16 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300">
+    <i class="fas fa-comment-dots text-xl md:text-2xl"></i>
+</button>
+<div id="chat-window" class="absolute bottom-16 right-0 w-80 md:w-96 bg-white rounded-xl shadow-2xl overflow-hidden transform scale-0 origin-bottom-right transition-transform duration-300">
+    <div class="bg-orange-600 text-white p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-orange-300 rounded-full flex items-center justify-center">
+                <i class="fas fa-robot text-orange-800"></i>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm md:text-base">MotoTech Assistant</h4>
+                <p class="text-xs opacity-90">Ask about services, products, or partnerships</p>
+            </div>
+        </div>
+        <button id="chat-close" class="text-white hover:text-gray-200">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div id="chat-messages" class="h-64 md:h-80 p-4 space-y-3 overflow-y-auto bg-gray-50">
+        <div class="flex items-start space-x-2">
+            <div class="w-8 h-8 bg-orange-200 rounded-full flex-shrink-0 flex items-center justify-center">
+                <i class="fas fa-robot text-orange-700 text-sm"></i>
+            </div>
+            <div class="bg-white p-3 rounded-lg max-w-xs text-sm">
+                Hello! Welcome to <strong>MotoTech</strong>.<br>How can I help you today?
+            </div>
+        </div>
+    </div>
+    <form id="chat-form" class="p-3 bg-white border-t flex items-center space-x-2">
+        <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+        <button type="submit" class="bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-lg transition">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </form>
+</div>
+</div>
+
+<script>
+// Set the zoom level to 75% when the page loads
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.zoom = "75%";
+});
+</script>
+
+<!-- FLOATING QR CODE -->
+<div id="qr-float" class="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 transition-all duration-300">
+<div class="relative group">
+    <div class="absolute inset-x-0 h-1 bg-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" id="scanner-beam"></div>
+    <div class="bg-white p-4 rounded-xl shadow-2xl border border-gray-200 text-center transform transition-all duration-300 hover:scale-105">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mototech.mw" alt="Scan to visit MotoTech" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-3">
+        <p class="text-xs md:text-sm font-semibold text-gray-700 flex items-center justify-center gap-2">
+            <i class="fas fa-qrcode text-orange-600"></i> Scan Me
+        </p>
+    </div>
+    <div class="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 bg-black text-white text-xs rounded px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        Open MotoTech Website
+        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-2 w-0 h-0 border-t-4 border-b-4 border-r-8 border-transparent border-r-black"></div>
+    </div>
+</div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.innerHTML = mobileMenu.classList.contains('hidden')
+        ? '<i class="fas fa-bars"></i>'
+        : '<i class="fas fa-times"></i>';
+});
+
+// Chat Bot
+const chatToggle = document.getElementById('chat-toggle');
+const chatWindow = document.getElementById('chat-window');
+const chatClose = document.getElementById('chat-close');
+const chatForm = document.getElementById('chat-form');
+const chatInput = document.getElementById('chat-input');
+const chatMessages = document.getElementById('chat-messages');
+
+chatToggle.addEventListener('click', () => {
+    const isOpen = !chatWindow.classList.contains('scale-0');
+    chatWindow.classList.toggle('scale-0', isOpen);
+    chatWindow.classList.toggle('scale-100', !isOpen);
+});
+
+chatClose.addEventListener('click', () => {
+    chatWindow.classList.add('scale-0');
+    chatWindow.classList.remove('scale-100');
+});
+
+chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const message = chatInput.value.trim();
+    if (!message) return;
+    addMessage(message, 'user');
+    chatInput.value = '';
+    setTimeout(() => {
+        const replies = [
+            "We build custom software, mobile apps, and IoT solutions tailored for Malawi.",
+            "Get in touch at +265 999 712 254 or info@mototech.mw to discuss your project.",
+            "Yes, we offer full-stack development, UI/UX design, and cloud deployment.",
+            "Our team specializes in Python, Django, React, Flutter, and embedded systems.",
+            "Project pricing starts from MWK 2.5M depending on scope and timeline."
+        ];
+        const randomReply = replies[Math.floor(Math.random() * replies.length)];
+        addMessage(randomReply, 'bot');
+    }, 800);
+});
+
+function addMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `flex items-start space-x-2 ${sender === 'user' ? 'justify-end' : ''}`;
+    const bubble = document.createElement('div');
+    bubble.className = `p-3 rounded-lg max-w-xs text-sm ${sender === 'user' ? 'bg-orange-600 text-white' : 'bg-white border border-gray-200'}`;
+    bubble.innerHTML = text;
+    msgDiv.appendChild(bubble);
+    if (sender === 'bot') {
+        const avatar = document.createElement('div');
+        avatar.className = 'w-8 h-8 bg-orange-200 rounded-full flex-shrink-0 flex items-center justify-center';
+        avatar.innerHTML = '<i class="fas fa-robot text-orange-700 text-sm"></i>';
+        msgDiv.insertBefore(avatar, bubble);
+    }
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// QR Beam Animation
+const beam = document.getElementById('scanner-beam');
+let direction = 1, position = 0, speed = 2, height = 100;
+function animateBeam() {
+    position += direction * speed;
+    if (position >= height || position <= 0) direction *= -1;
+    beam.style.top = `${position}%`;
+    beam.style.opacity = '1';
+    requestAnimationFrame(animateBeam);
+}
+document.querySelector('#qr-float .group').addEventListener('mouseenter', () => {
+    beam.style.opacity = '1';
+    animateBeam();
+});
+document.querySelector('#qr-float .group').addEventListener('mouseleave', () => {
+    beam.style.opacity = '0';
+    beam.style.top = '0%';
+});
+
+// Responsive Adjustments
+function adjustChatSize() {
+    const chatBot = document.getElementById('chat-bot');
+    const qr = document.getElementById('qr-float');
+    if (window.innerWidth < 768) {
+        chatBot.style.right = '1rem'; chatBot.style.bottom = '5rem';
+        qr.style.right = '0.5rem'; qr.style.transform = 'translateY(-50%) scale(0.8)';
+    } else {
+        chatBot.style.right = '1rem'; chatBot.style.bottom = '5rem';
+        qr.style.right = '1rem'; qr.style.transform = 'translateY(-50%) scale(1)';
+    }
+}
+window.addEventListener('resize', adjustChatSize);
+adjustChatSize();
+
+// Stats Animation
+const statsCards = document.querySelectorAll('.stats-card');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+}, { threshold: 0.3 });
+statsCards.forEach(card => observer.observe(card));
+</script>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>
