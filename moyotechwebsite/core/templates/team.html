@@ -38,79 +38,57 @@
             We deliver hands-on training in software development, AI, cybersecurity, and digital innovation — designed to meet global standards while solving local challenges. Our passionate team bridges ambition and opportunity, building Malawi’s tech ecosystem one developer at a time.
         </p>
     </div>
+{% load static %}
 
-    <!-- Leadership Team -->
-    <div class="bg-white rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
-        <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-8 text-center">
-            Leadership Team
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Pempho Jimu - CEO -->
-            <div class="text-center">
-                <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
-                    <img src="{% static 'jimu.jpeg' %}" alt="Pempho Jimu" class="w-full h-full object-cover">
-                </div>
-                <h4 class="font-semibold text-lg text-orange-600">Pempho Jimu</h4>
-                <p class="text-sm text-gray-600">CEO/Founder</p>
-                <p class="text-xs text-gray-500 mt-1">Visionary leader with 5+ years in cybersecurity and IT, driving Moyo Tech's mission to secure Malawi's digital future.</p>
+<!-- Leadership Team -->
+<div class="bg-white rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
+    <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-8 text-center">
+        Leadership Team
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for member in leadership %}
+        <div class="text-center">
+            <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
+                {% if member.photo %}
+                    <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="w-full h-full object-cover">
+                {% else %}
+                    <div class="bg-gray-300 w-full h-full"></div>
+                {% endif %}
             </div>
-            <!-- Bernard Hamie - Senior Developer -->
-            <!-- <div class="text-center">
-                <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
-                    <img src="{% static 'troy.jpeg' %}" alt="Bernard Hamie" class="w-full h-full object-cover">
-                </div>
-                <h4 class="font-semibold text-lg text-orange-600">Bernard Hamie</h4>
-                <p class="text-sm text-gray-600">Senior Engineer</p>
-                <p class="text-xs text-gray-500 mt-1">Expert in full-stack development and scalable apps, mentoring students on real-world coding challenges.</p>
-            </div> -->
-            <!-- Ben Malunga - CTO -->
-            <!-- <div class="text-center">
-                <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ben Malunga" class="w-full h-full object-cover">
-                </div>
-                <h4 class="font-semibold text-lg text-orange-600">Ben Malunga</h4>
-                <p class="text-sm text-gray-600">CTO</p>
-                <p class="text-xs text-gray-500 mt-1">Innovative tech strategist with 20+ years experience, pioneering AI and software solutions for African innovation.</p>
-            </div> -->
+            <h4 class="font-semibold text-lg text-orange-600">{{ member.name }}</h4>
+            <p class="text-sm text-gray-600">{{ member.title }}</p>
+            <p class="text-xs text-gray-500 mt-1">{{ member.bio|linebreaks }}</p>
         </div>
+        {% empty %}
+        <p class="col-span-full text-center text-gray-500">No leadership members yet.</p>
+        {% endfor %}
     </div>
+</div>
 
-    <!-- Instructors -->
-    <div class="bg-orange-50 rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
-        <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-8 text-center">
-            Our Team
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Placeholder Instructor 1 -->
-            <div class="text-center">
-                <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
-                    <img src="{% static 'troy.jpeg' %}" alt="Bernard Hamie" class="w-full h-full object-cover">
-                </div>
-                <h4 class="font-semibold text-lg text-orange-600">Bernard Hamie</h4>
-                <p class="text-sm text-gray-600">Senior Engineer</p>
-                <p class="text-xs text-gray-500 mt-1">Expert in full-stack development and scalable apps, mentoring students on real-world coding challenges.</p>
+<!-- Our Team (Instructors) -->
+<div class="bg-orange-50 rounded-2xl p-6 md:p-10 shadow-xl service-card animate-fade-in mb-12">
+    <h2 class="font-maria text-3xl md:text-4xl font-bold text-orange-700 mb-8 text-center">
+        Our Team
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for member in instructors %}
+        <div class="text-center">
+            <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
+                {% if member.photo %}
+                    <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="w-full h-full object-cover">
+                {% else %}
+                    <div class="bg-gray-300 w-full h-full"></div>
+                {% endif %}
             </div>
-            <!-- Placeholder Instructor 2 -->
-            <div class="text-center">
-                <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
-                    <img src="{% static 'ben.jpg' %}" alt="Ben Malunga" class="w-full h-full object-cover">
-                </div>
-                <h4 class="font-semibold text-lg text-orange-600">Ben Malunga</h4>
-                <p class="text-sm text-gray-600">Tech Lead</p>
-                <p class="text-xs text-gray-500 mt-1">Experienced engineer who enjoys leading teams and driving innovation.</p>
-            </div>
-            <!-- Placeholder Instructor 3 -->
-            <!-- <div class="text-center">
-                <div class="w-32 h-32 rounded-full mx-auto overflow-hidden bg-gray-200 mb-4">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Instructor" class="w-full h-full object-cover">
-                </div>
-                <h4 class="font-semibold text-lg text-orange-600">Sarah Phiri</h4>
-                <p class="text-sm text-gray-600">Cybersecurity Specialist</p>
-                <p class="text-xs text-gray-500 mt-1">Ethical hacking trainer, CompTIA certified.</p>
-            </div> -->
+            <h4 class="font-semibold text-lg text-orange-600">{{ member.name }}</h4>
+            <p class="text-sm text-gray-600">{{ member.title }}</p>
+            <p class="text-xs text-gray-500 mt-1">{{ member.bio|linebreaks }}</p>
         </div>
+        {% empty %}
+        <p class="col-span-full text-center text-gray-500">No instructors yet.</p>
+        {% endfor %}
     </div>
-
+</div>
     <!-- Our Vision & Mission -->
     <div class="grid md:grid-cols-2 gap-8 mb-12">
         <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg service-card animate-fade-in">
